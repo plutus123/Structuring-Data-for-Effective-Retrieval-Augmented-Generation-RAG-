@@ -1,0 +1,1 @@
+# Structuring-Data-for-Effective-Retrieval-Augmented-Generation-RAG-
