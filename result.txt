@@ -1,0 +1,19 @@
+Query: Explain the concept of dynamic pipelines in GStreamer.
+
+Response: Dynamic pipelines in GStreamer refer to the ability to build and modify media processing pipelines 'on the fly'. This means that as new information becomes available or circumstances change, you can add, remove, or modify elements within your pipeline during runtime. This provides a great deal of flexibility and enables complex use-cases compared to static pipelines where all elements and their configurations are pre-defined when the pipeline is created.
+
+One significant aspect of dynamic pipeline handling in GStreamer is "Pad" and "Ghost Pad". Pads act as input/output ports for elements and can be created or linked on demand. Ghost pad is a special type of pad to facilitate connection across bin boundaries, helping in encapsulating logic inside bins while dynamically linking elements.
+
+Another important factor is understanding the different states of the elements and the pipelines. GStreamer pipelines have four different states - NULL, READY, PAUSED, and PLAYING. The transition between these states allows you to manage the system resources effectively and control the data flow between the elements. 
+
+However, working with dynamic pipelines requires correct handling of buffering, timestamps, event synchronization, and state changes. Understanding how to deal with these challenges is also crucial for successful implementation. 
+
+Monitoring or reacting to events is another vital part of GStreamer dynamic pipelines. Events like EOS (end-of-stream), errors, metadata updates, etc., can trigger actions in your application. You can listen to these events by connecting callback functions to the "message" signal emitted by the pipeline bus. 
+
+To conclude, dynamic pipelines offer a strong feature in GStreamer to build efficient, flexible, and complex multimedia applications. However, managing dynamic pipelines requires an understanding of various concepts like pad linking, states, event handling, etc.
+
+Embeddings have been created for the following sections:
+- Introduction
+- Concepts
+- Examples
+- CodeSnippets
